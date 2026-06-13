@@ -73,10 +73,10 @@ export default function Hero() {
             </a>
 
             <a
-              href="/cv.pdf"
+              href="#contact"
               className="border border-zinc-700 bg-zinc-900/60 backdrop-blur-md px-7 py-4 rounded-2xl hover:bg-zinc-800 transition-all duration-300"
             >
-              Download CV
+              Contact me
             </a>
 
           </div>
