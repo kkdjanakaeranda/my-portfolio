@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const stats = [
   {
-    number: "20+",
+    number: "2+",
     label: "Projects Done",
   },
   {
@@ -20,7 +20,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-black text-white overflow-hidden pt-28">
+    <section className="relative min-h-screen bg-black text-white overflow-hidden pt-28 pb-28">
 
       {/* BACKGROUND GRADIENT */}
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(124,58,237,0.15),transparent_35%)]" />
