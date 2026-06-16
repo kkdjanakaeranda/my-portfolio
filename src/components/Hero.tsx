@@ -22,29 +22,34 @@ const stats = [
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen py-24 bg-black text-white overflow-hidden flex items-center pt-10"
       id="home"
+      className="relative min-h-screen bg-black text-white overflow-hidden pt-16 md:pt-16"
     >
       {/* Background Glow */}
       <div className="absolute right-0 top-0 h-full w-full pointer-events-none bg-[radial-gradient(circle_at_75%_40%,rgba(124,58,237,0.18),transparent_35%)]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-6 min-h-screen py-24 flex items-center py-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-6 min-h-[calc(100vh-56px)] md:min-h-[calc(100vh-64px)] flex items-center">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
 
           {/* RIGHT SIDE FIRST ON MOBILE */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="order-first lg:order-last flex justify-center lg:justify-end"
+            className="order-first lg:order-last flex justify-center lg:justify-end mb-6 lg:mb-0"
           >
+            
             <div className="relative">
 
               {/* Glow */}
               <div className="absolute inset-0 bg-violet-500/20 blur-3xl rounded-full scale-110" />
 
               {/* Image */}
-              <div className="relative w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border border-zinc-800 bg-zinc-900">
+              <div className="relative w-[180px] h-[180px]
+                sm:w-[240px] sm:h-[240px]
+                md:w-[320px] md:h-[320px]
+                lg:w-[400px] lg:h-[400px]
+                rounded-full overflow-hidden border border-zinc-800 bg-zinc-900">
 
                 <Image
                   src="/images/profile.png"
@@ -56,8 +61,8 @@ export default function Hero() {
               </div>
 
               {/* Location Card */}
-              <div className="hidden md:block absolute -bottom-3 -left-3 bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3">
-                <p className="text-xs text-zinc-500">
+              <div className="absolute -bottom-1 left-1 bg-zinc-900 border border-zinc-800 rounded-lg px-2 py-1 text-[10px] md:-bottom-3 md:-left-3 md:rounded-xl md:px-4 md:py-3 md:text-xs">
+                <p className="text-zinc-500">
                   Based In
                 </p>
 
@@ -67,8 +72,8 @@ export default function Hero() {
               </div>
 
               {/* Focus Card */}
-              <div className="hidden md:block absolute top-4 -right-4 bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3">
-                <p className="text-xs text-zinc-500">
+              <div className="absolute top-1 right-1 bg-zinc-900 border border-zinc-800 rounded-lg px-2 py-1 text-[10px] md:top-4 md:-right-4 md:rounded-xl md:px-4 md:py-3 md:text-xs">
+                <p className="text-zinc-500">
                   Focus
                 </p>
 
@@ -87,6 +92,7 @@ export default function Hero() {
             transition={{ duration: 0.7 }}
             className="text-center lg:text-left"
           >
+
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-3 py-2 rounded-full">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
