@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-black text-white overflow-hidden pt-14 md:pt-14"
+      className="relative min-h-screen bg-black text-white overflow-hidden pt-16 pb-16 md:pt-16 sm:pt-16"
     >
       {/* Background Glow */}
       <div className="absolute right-0 top-0 h-full w-full pointer-events-none bg-[radial-gradient(circle_at_75%_40%,rgba(124,58,237,0.18),transparent_35%)]" />
@@ -165,7 +165,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex">
         <div className="w-6 h-10 border border-zinc-700 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-zinc-400 rounded-full mt-2 animate-bounce" />
         </div>
