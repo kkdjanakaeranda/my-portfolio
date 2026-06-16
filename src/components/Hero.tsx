@@ -22,13 +22,13 @@ const stats = [
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen bg-black text-white overflow-hidden flex items-center pt-10"
+      className="relative min-h-screen py-24 bg-black text-white overflow-hidden flex items-center pt-10"
       id="home"
     >
       {/* Background Glow */}
       <div className="absolute right-0 top-0 h-full w-full pointer-events-none bg-[radial-gradient(circle_at_75%_40%,rgba(124,58,237,0.18),transparent_35%)]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-6 min-h-screen flex items-center py-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-6 min-h-screen py-24 flex items-center py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
 
           {/* RIGHT SIDE FIRST ON MOBILE */}
