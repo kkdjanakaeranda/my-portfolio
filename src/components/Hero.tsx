@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-black text-white overflow-hidden pt-16 pb-16 md:pt-16"
+      className="relative min-h-screen bg-black text-white overflow-hidden pt-14 md:pt-14"
     >
       {/* Background Glow */}
       <div className="absolute right-0 top-0 h-full w-full pointer-events-none bg-[radial-gradient(circle_at_75%_40%,rgba(124,58,237,0.18),transparent_35%)]" />
@@ -45,11 +45,12 @@ export default function Hero() {
               <div className="absolute inset-0 bg-violet-500/20 blur-3xl rounded-full scale-110" />
 
               {/* Image */}
-              <div className="relative w-45 h-45
-                sm:w-60 sm:h-60
-                md:w-[320px] md:h-80
-                lg:w-100 lg:h-100
-                rounded-full overflow-hidden border border-zinc-800 bg-zinc-900">
+              <div className="relative w-[180px] h-[180px]
+                sm:w-[240px] sm:h-[240px]
+                md:w-[320px] md:h-[320px]
+                lg:w-[400px] lg:h-[400px]
+                rounded-full overflow-hidden border border-zinc-800 bg-zinc-900
+                transition-transform duration-500 hover:scale-105">
 
                 <Image
                   src="/images/profile.png"
@@ -108,7 +109,7 @@ export default function Hero() {
             </h1>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="bg-linear-to-r from-white via-zinc-300 to-violet-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white via-zinc-300 to-violet-400 bg-clip-text text-transparent">
                 Janaka Eranda
               </span>
             </h1>
@@ -160,18 +161,15 @@ export default function Hero() {
 
           </motion.div>
 
-
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex">
-            <div className="w-6 h-10 border border-zinc-700 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-zinc-400 rounded-full mt-2 animate-bounce" />
-            </div>
-          </div>
-
         </div>
       </div>
 
-
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex">
+        <div className="w-6 h-10 border border-zinc-700 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-zinc-400 rounded-full mt-2 animate-bounce" />
+        </div>
+      </div>
     </section>
   );
 }
