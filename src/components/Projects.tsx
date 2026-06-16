@@ -21,8 +21,7 @@ const projects = [
     tech: ["ESP32", "Firebase", "IoT"],
     description:
       "IoT-based automated irrigation system with real-time monitoring and remote control.",
-    repo: "https://github.com/yourusername/smart-irrigation",
-    live: "https://your-live-url.com",
+    repo: "https://github.com/kkdjanakaeranda/smart-irrigation-system",
   },
   {
     title: "Student Management System",
@@ -41,8 +40,8 @@ const projects = [
     tech: ["Next.js", "Tailwind CSS"],
     description:
       "Modern responsive portfolio website showcasing projects, skills, and experience.",
-    repo: "https://github.com/yourusername/my-portfolio",
-    live: "https://your-portfolio.vercel.app",
+    repo: "https://github.com/kkdjanakaeranda/my-portfolio",
+    live: "https://janakaeranda-portfolio.vercel.app/",
   },
 ];
 
@@ -50,7 +49,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative bg-black text-white py-20 px-3 overflow-hidden scroll-mt-8"
+      className="relative bg-black text-white py-10 px-3 overflow-hidden scroll-mt-8"
     >
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_80%_20%,rgba(124,58,237,0.15),transparent_35%)]" />
 
@@ -137,19 +136,23 @@ export default function Projects() {
                     href={project.repo}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex-1 text-center px-3 py-2 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-violet-500 transition text-xs"
+                    className={`text-center px-3 py-2 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-violet-500 transition text-xs ${
+                      project.live ? "flex-1" : "w-full"
+                    }`}
                   >
                     GitHub
                   </a>
 
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex-1 text-center px-3 py-2 rounded-xl bg-white text-black hover:bg-zinc-200 transition text-xs font-medium"
-                  >
-                    Live
-                  </a>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 text-center px-3 py-2 rounded-xl bg-white text-black hover:bg-zinc-200 transition text-xs font-medium"
+                    >
+                      Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
