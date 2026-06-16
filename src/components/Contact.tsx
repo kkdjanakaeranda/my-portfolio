@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const contacts = [
   {
@@ -30,7 +31,54 @@ const contacts = [
 ];
 
 export default function Contact() {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+
+  async function handleSubmit(
+  e: React.FormEvent<HTMLFormElement>
+) {
+  e.preventDefault();
+
+  setLoading(true);
+  setSuccess("");
+  setError("");
+
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.get("name"),
+        email: formData.get("email"),
+        subject: formData.get("subject"),
+        message: formData.get("message"),
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok || !data.success) {
+      throw new Error(data.error || "Failed to send");
+    }
+
+    setError("");
+    setSuccess("Message sent successfully!");
+    form.reset();
+  } catch (err) {
+    setSuccess("");
+    setError("Failed to send message.");
+  } finally {
+    setLoading(false);
+  }
+}
   return (
+    
     <section
       id="contact"
       className="relative bg-black text-white py-20 px-3 overflow-hidden scroll-mt-8"
@@ -129,22 +177,7 @@ export default function Contact() {
                 Send a Message
               </h3>
 
-              <form
-                action="https://formsubmit.co/kkdjanakaeranda@gmail.com"
-                method="POST"
-                className="space-y-4"
-              >
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value="New Portfolio Message"
-                />
-
-                <input
-                  type="hidden"
-                  name="_captcha"
-                  value="false"
-                />
+              <form onSubmit={handleSubmit} className="space-y-4">
 
                 <input
                   type="text"
@@ -178,11 +211,24 @@ export default function Contact() {
                   className="w-full bg-zinc-950 border border-zinc-800 rounded-2xl px-4 py-4 text-sm outline-none focus:border-violet-500 transition resize-none"
                 />
 
+                {success && (
+                    <p className="text-green-400 text-sm">
+                      {success}
+                    </p>
+                  )}
+
+                  {error && (
+                    <p className="text-red-400 text-sm">
+                      {error}
+                    </p>
+                  )}
+
                 <button
                   type="submit"
-                  className="w-full bg-white text-black py-4 rounded-2xl font-medium hover:bg-zinc-200 transition-all duration-300"
+                  disabled={loading}
+                  className="w-full bg-white text-black py-4 rounded-2xl font-medium hover:bg-zinc-200 transition-all duration-300 disabled:opacity-50"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>
@@ -190,5 +236,7 @@ export default function Contact() {
         </div>
       </div>
     </section>
+
+    
   );
 }
