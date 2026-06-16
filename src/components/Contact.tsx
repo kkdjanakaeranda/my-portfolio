@@ -81,7 +81,7 @@ export default function Contact() {
     
     <section
       id="contact"
-      className="relative bg-black text-white py-20 px-3 overflow-hidden scroll-mt-8"
+      className="relative bg-black text-white py-10 px-3 overflow-hidden scroll-mt-8"
     >
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_20%,rgba(124,58,237,0.16),transparent_35%)]" />
 
