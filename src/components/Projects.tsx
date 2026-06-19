@@ -31,7 +31,7 @@ const projects = [
     description:
       "Role-based student management platform with attendance, grading, and admin modules.",
     repo: "https://github.com/kkdjanakaeranda/student-management-system",
-    live: "https://your-live-url.com",
+    live: "https://student-management-system-janaka.infinityfree.io/login.php",
   },
   {
     title: "Portfolio Website",
