@@ -22,6 +22,7 @@ const projects = [
     description:
       "IoT-based automated irrigation system with real-time monitoring and remote control.",
     repo: "https://github.com/kkdjanakaeranda/smart-irrigation-system",
+    repo2: "https://github.com/KMDS21/Smart-Irrigation-System",
   },
   {
     title: "Student Management System",
@@ -142,6 +143,19 @@ export default function Projects() {
                   >
                     GitHub
                   </a>
+
+                  {project.repo2 && (
+                  <a
+                    href={project.repo2}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`text-center px-3 py-2 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-violet-500 transition text-xs ${
+                      project.live ? "flex-1" : "w-full"
+                    }`}
+                  >
+                    GitHub
+                  </a>
+                  )}
 
                   {project.live && (
                     <a
