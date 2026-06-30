@@ -4,6 +4,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const projects = [
+    {
+    title: "CLINEXA - Hospital Appointment Management System",
+    type: "Web Application - Group Project",
+    image: "/projects/clinexa.jpg",
+    tech: ["React", "Vite", "Supabase", "Tailwind CSS"],
+    description:
+      "Hospital Appointment Management System is a web-based application for managing hospital appointments, doctor schedules, and patient records with secure role-based access.",
+    repo: "https://github.com/neshanpramuditha/Hospital-Appointment-System",
+    live: "https://github.com/neshanpramuditha/Hospital-Appointment-System",
+  },
+
   {
     title: "EduRAG+",
     type: "AI / RAG System",
@@ -16,7 +27,7 @@ const projects = [
   },
   {
     title: "Smart Irrigation System",
-    type: "IoT Project",
+    type: "IoT Project - Group Project",
     image: "/projects/irrigation.jpg",
     tech: ["ESP32", "Firebase", "IoT"],
     description:
@@ -26,7 +37,7 @@ const projects = [
   },
   {
     title: "Student Management System",
-    type: "Web Application",
+    type: "Web Application - Individual Project",
     image: "/projects/student-management.jpg",
     tech: ["PHP", "MySQL", "JavaScript"],
     description:
