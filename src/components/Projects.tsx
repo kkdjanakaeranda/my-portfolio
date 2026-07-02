@@ -4,6 +4,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const projects = [
+  {
+    title: "Expense Tracker",
+    type: "Web Application - Personal Project",
+    image: "/projects/expense-tracker.jpg",
+    tech: ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"], 
+    description:
+      "A comprehensive personal finance management application that allows users to track income and expenses, categorize transactions, and visualize spending habits through interactive charts.",
+    repo: "https://github.com/kkdjanakaeranda/expense-tracker",
+    live: "https://github.com/kkdjanakaeranda/expense-tracker",
+  },
+
     {
     title: "CLINEXA - Hospital Appointment Management System",
     type: "Web Application - Group Project",
