@@ -12,7 +12,7 @@ const projects = [
     description:
       "A comprehensive personal finance management application that allows users to track income and expenses, categorize transactions, and visualize spending habits through interactive charts.",
     repo: "https://github.com/kkdjanakaeranda/expense-tracker",
-    live: "https://github.com/kkdjanakaeranda/expense-tracker",
+    live: "https://expense-tracker-alpha-69.vercel.app/",
   },
 
     {
