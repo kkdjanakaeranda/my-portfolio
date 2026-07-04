@@ -6,7 +6,7 @@ import CountUp from "react-countup";
 
 const stats = [
   {
-    end: 2,
+    end: 5,
     label: "Projects",
   },
   {
