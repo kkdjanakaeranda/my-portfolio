@@ -45,6 +45,7 @@ const projects = [
       "IoT-based automated irrigation system with real-time monitoring and remote control.",
     repo: "https://github.com/kkdjanakaeranda/smart-irrigation-system",
     repo2: "https://github.com/KMDS21/Smart-Irrigation-System",
+    live: "https://www.linkedin.com/posts/kkdjanakaeranda_smartirrigation-sustainablefarming-climateresilience-ugcPost-7352631703900770304-1KRn/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADG-_HUBIg1AgcfTQriBz2qjr1QNGvoA2Hg",
   },
   {
     title: "Student Management System",
