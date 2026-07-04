@@ -33,8 +33,8 @@ const projects = [
     tech: ["FastAPI", "LangChain", "Pinecone", "OpenAI API"],
     description:
       "AI-powered RAG system for lecture note analysis, semantic search, and exam preparation.",
-    repo: "https://github.com/yourusername/edurag",
-    live: "https://edurag-demo.vercel.app",
+    repo: "https://github.com/kkdjanakaeranda/EduRAG",
+    live: "https://edu-rag-theta.vercel.app/",
   },
   {
     title: "Smart Irrigation System",
