@@ -23,7 +23,7 @@ const projects = [
     description:
       "Hospital Appointment Management System is a web-based application for managing hospital appointments, doctor schedules, and patient records with secure role-based access.",
     repo: "https://github.com/neshanpramuditha/Hospital-Appointment-System",
-    live: "https://github.com/neshanpramuditha/Hospital-Appointment-System",
+    live: "https://clinexa-azure.vercel.app/",
   },
 
   {
