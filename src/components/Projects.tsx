@@ -5,6 +5,16 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+  title: "Smart-IoT-Based-Plant-Irrigation-System",
+  type: "IoT Project - Personal Project",
+  image: "/projects/plant_irrigation.jpg",
+  tech: ["Arduino C++","ESP32", "Soil Moisture Sensor", "rain sensor"], 
+  description:
+    "An automated plant watering system utilizing a NodeMCU microcontroller and soil moisture sensors to track real-time soil water content, sync status logs via a Firebase cloud database, and provide remote manual override capabilities through a dedicated native Android application.",
+  repo: "https://github.com/kkdjanakaeranda/Smart-IoT-Based-Plant-Irrigation-System",
+  live: "", // You can add a live video demo or dashboard link here later if you want!
+},,
+  {
     title: "Expense Tracker",
     type: "Web Application - Personal Project",
     image: "/projects/expense-tracker.jpg",
