@@ -10,7 +10,7 @@ const projects = [
   image: "/projects/plant_irrigation.jpg",
   tech: ["Arduino C++","ESP32", "Soil Moisture Sensor", "rain sensor"], 
   description:
-    "An automated plant watering system utilizing a NodeMCU microcontroller and soil moisture sensors to track real-time soil water content, sync status logs via a Firebase cloud database, and provide remote manual override capabilities through a dedicated native Android application.",
+    "An IoT-based Smart Plant Irrigation System developed using ESP32 to automate irrigation based on real-time environmental conditions. The system continuously monitors soil moisture, temperature, humidity, rainfall, and water tank level to make intelligent irrigation decisions. It also provides remote monitoring and manual control through the Blynk IoT mobile application.",
   repo: "https://github.com/kkdjanakaeranda/Smart-IoT-Based-Plant-Irrigation-System",
   live: "", // You can add a live video demo or dashboard link here later if you want!
 },,
