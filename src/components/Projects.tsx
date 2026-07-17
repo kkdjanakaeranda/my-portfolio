@@ -13,7 +13,7 @@ const projects = [
     "An IoT-based Smart Plant Irrigation System developed using ESP32 to automate irrigation based on real-time environmental conditions. The system continuously monitors soil moisture, temperature, humidity, rainfall, and water tank level to make intelligent irrigation decisions. It also provides remote monitoring and manual control through the Blynk IoT mobile application.",
   repo: "https://github.com/kkdjanakaeranda/Smart-IoT-Based-Plant-Irrigation-System",
   live: "", // You can add a live video demo or dashboard link here later if you want!
-},
+  },
   {
     title: "Expense Tracker",
     type: "Web Application - Personal Project",
