@@ -5,6 +5,16 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+  title: "Smart Hire",
+  type: "Web Application - Group Project",
+  image: "/projects/smart-hire.jpg",
+  tech: ["Angular","Python", "FastAPI", "MCP Server", "Supabase", "SQLAlchemy ORM" , "OpenAI API"], 
+  description:
+    "Smart Hire is a centralized digital marketplace that connects customers with trusted service providers such as plumbers, electricians, cleaners, tutors, repair technicians, home-maintenance workers, and technical-support professionals.",
+  repo: "https://github.com/nilan92/Smart-Hire-System",
+  live: "", // You can add a live video demo or dashboard link here later if you want!
+  },
+  {
   title: "Smart-IoT-Based-Plant-Irrigation-System",
   type: "IoT Project - Personal Project",
   image: "/projects/plant_irrigation.jpg",
