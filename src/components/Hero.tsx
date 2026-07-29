@@ -68,7 +68,7 @@ export default function Hero() {
                 </p>
 
                 <p className="font-medium">
-                  Sri Lanka 🇱🇰
+                  Sri Lanka
                 </p>
               </div>
 

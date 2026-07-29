@@ -80,7 +80,7 @@ export function generateLocalResponse(query: string): string {
     normalized.includes("download cv") ||
     normalized.includes("download resume")
   ) {
-    return `### 📄 Resume / CV
+    return `### Resume / CV
 
 Janaka Eranda's professional resume is available for review and download. It details his academic history, key projects, and technical skills.
 
@@ -101,7 +101,7 @@ You can download it using the link below:
     normalized.includes("call") ||
     normalized.includes("social")
   ) {
-    return `### 📞 Contact Details & Social Links
+    return `### Contact Details & Social Links
 
 You can get in touch with Janaka Eranda directly through any of the following channels:
 
@@ -179,7 +179,7 @@ Let me know if you would like to download his [Resume](${data.contact.resume})!`
     );
 
     if (hasSkill || relatedProjects.length > 0) {
-      let response = `### 🛠️ Experience with ${techQuery}\n\n`;
+      let response = `### Experience with ${techQuery}\n\n`;
       if (hasSkill) {
         response += `Yes! **${techQuery}** is part of Janaka's technical toolkit.\n\n`;
       } else {
@@ -223,7 +223,7 @@ Let me know if you would like to download his [Resume](${data.contact.resume})!`
 
     if (normalized.includes("ai") || normalized.includes("ml") || normalized.includes("rag") || normalized.includes("langchain")) {
       const skills = ["OpenAI API", "LangChain", "Pinecone", "MCP Server"];
-      return `### 🤖 AI Toolkit
+      return `### AI Toolkit
 
 Janaka has specialized skills in building AI systems, including RAG (Retrieval-Augmented Generation) applications:
 
@@ -239,9 +239,9 @@ Janaka has specialized skills in building AI systems, including RAG (Retrieval-A
     }
 
     // Return all skills
-    let response = `### 🛠️ Janaka's Technical Toolkit\n\n`;
+    let response = `### Janaka's Technical Toolkit\n\n`;
     data.skills.categories.forEach(cat => {
-      response += `#### ${cat.icon} ${cat.title}\n`;
+      response += `#### ${cat.title}\n`;
       response += `${cat.skills.join(", ")}\n\n`;
     });
     return response;
@@ -258,7 +258,7 @@ Janaka has specialized skills in building AI systems, including RAG (Retrieval-A
     normalized.includes("school") ||
     normalized.includes("faculty")
   ) {
-    let response = `### 🎓 Education Journey\n\n`;
+    let response = `### Education Journey\n\n`;
     data.education.forEach(edu => {
       response += `#### ${edu.degree}\n`;
       response += `* **Institution:** ${edu.institution}\n`;
@@ -278,7 +278,7 @@ Janaka has specialized skills in building AI systems, including RAG (Retrieval-A
     normalized.includes("activities") ||
     normalized.includes("leadership")
   ) {
-    let response = `### 💼 Experience & Activities\n\n`;
+    let response = `### Experience & Activities\n\n`;
     response += `Janaka is currently looking for **Software Engineering Internship** opportunities. Here is his practical experience:\n\n`;
 
     data.experience.forEach(exp => {
@@ -287,7 +287,7 @@ Janaka has specialized skills in building AI systems, including RAG (Retrieval-A
       response += `* **Description:** ${exp.description}\n\n`;
     });
 
-    response += `#### 🏆 Achievements & Projects Led\n`;
+    response += `#### Achievements & Projects Led\n`;
     data.achievements.forEach(ach => {
       response += `* **${ach.title}**: ${ach.description}\n`;
     });
@@ -306,9 +306,9 @@ Janaka has specialized skills in building AI systems, including RAG (Retrieval-A
     normalized.includes("janaka") ||
     normalized.includes("eranda")
   ) {
-    return `### 👋 About Janaka Eranda
+    return `### About Janaka Eranda
 
-**Janaka Eranda** is a Software Engineering student at the **University of Kelaniya** (BICT Hons, specializing in Software System Technology) and a Full-Stack & AI developer based in **Sri Lanka 🇱🇰**.
+**Janaka Eranda** is a Software Engineering student at the **University of Kelaniya** (BICT Hons, specializing in Software System Technology) and a Full-Stack & AI developer based in **Sri Lanka**.
 
 #### Key Focus Areas:
 ${data.about.focusAreas.map(item => `* ${item}`).join("\n")}
@@ -361,9 +361,9 @@ function formatProjectsList(projects: Project[], title: string): string {
     return `No projects found matching that query. Janaka has worked on AI systems (EduRAG+), Web applications (Smart Hire, Expense Tracker), and IoT systems (Smart Plant Irrigation).`;
   }
 
-  let response = `### 📁 ${title}\n\n`;
+  let response = `### ${title}\n\n`;
   projects.forEach(p => {
-    response += `#### 🛠️ ${p.title}\n`;
+    response += `#### ${p.title}\n`;
     response += `* **Type:** ${p.type}\n`;
     response += `* **Technologies:** ${p.tech.join(", ")}\n`;
     response += `* **Description:** ${p.description}\n`;
@@ -377,7 +377,7 @@ function formatProjectsList(projects: Project[], title: string): string {
 }
 
 function formatSkillCategory(category: SkillCategory): string {
-  return `### ${category.icon} ${category.title}
+  return `### ${category.title}
 
 Here are Janaka's skills in this category:
 

@@ -207,7 +207,7 @@ export default function Chatbot() {
                 /* Welcome Message & Suggestion Chips */
                 <div className="space-y-4">
                   <div className="text-xs text-zinc-400 space-y-3 bg-zinc-900/30 border border-zinc-800/60 p-4 rounded-xl">
-                    <p className="font-semibold text-white text-[13px]">👋 Janaka's AI Portfolio Assistant</p>
+                    <p className="font-semibold text-white text-[13px]">Janaka's AI Portfolio Assistant</p>
                     <p>I can help answer questions using Janaka's portfolio details. Ask me about:</p>
                     <ul className="list-disc pl-4 space-y-1">
                       <li>Projects and tech stack</li>

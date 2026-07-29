@@ -2,7 +2,7 @@
   "personal": {
     "name": "Janaka Eranda",
     "role": "Software Developer & AI Engineer",
-    "location": "Sri Lanka 🇱🇰",
+    "location": "Sri Lanka",
     "profileImage": "/images/profile.png",
     "tagline": "Building modern web applications, AI-powered solutions, and IoT systems that solve real-world problems.",
     "availability": "Available for Internships",
@@ -12,34 +12,34 @@
     "journey": "I am Janaka Eranda, a Software Engineering-focused undergraduate at the University of Kelaniya with a strong passion for Full Stack Development, Artificial Intelligence, and emerging technologies. My experience includes building AI-powered systems such as EduRAG+, developing modern web applications using Next.js and React, creating IoT solutions with ESP32 and Firebase, and designing scalable database-driven systems.",
     "currentFocus": "Currently expanding my expertise through the Advanced AI & Software Engineering program while actively seeking internship opportunities where I can contribute, learn, and grow as a software engineer.",
     "focusAreas": [
-      "Artificial Intelligence 🤖",
-      "Full Stack Development ⚛️",
-      "Software Engineering 🚀",
-      "IoT Systems 📡",
-      "Cloud Computing ☁️",
-      "Web Development 🌐"
+      "Artificial Intelligence",
+      "Full Stack Development",
+      "Software Engineering",
+      "IoT Systems",
+      "Cloud Computing",
+      "Web Development"
     ]
   },
   "skills": {
     "categories": [
       {
         "title": "Programming Languages",
-        "icon": "💻",
+        "icon": "",
         "skills": ["Java", "Python", "JavaScript", "TypeScript", "SQL", "C++", "Arduino C++"]
       },
       {
         "title": "Frontend Development",
-        "icon": "🎨",
+        "icon": "",
         "skills": ["React", "Next.js", "Angular", "Tailwind CSS", "HTML", "CSS"]
       },
       {
         "title": "Backend Development",
-        "icon": "⚙️",
+        "icon": "",
         "skills": ["Node.js", "Express.js", "PHP", "ASP.NET Core", "FastAPI", "REST APIs"]
       },
       {
         "title": "AI, Cloud & Databases",
-        "icon": "🤖",
+        "icon": "",
         "skills": ["OpenAI API", "LangChain", "Pinecone", "MCP Server", "MySQL", "PostgreSQL", "MongoDB", "Firebase", "Supabase", "Blynk IoT"]
       }
     ]
