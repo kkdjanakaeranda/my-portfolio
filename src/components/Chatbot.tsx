@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import { MessageSquare, X, Send, Trash2, Download } from "lucide-react";
 import { generateLocalResponse } from "@/utils/localChatEngine";
+import portfolioData from "@/data/portfolio-data.json";
 
 interface Message {
   id: string;
@@ -262,6 +263,7 @@ export default function Chatbot() {
                               components={{
                                 a: ({ href, children }) => {
                                   const isResume =
+                                    href === portfolioData.contact.resume ||
                                     href === "/resume.pdf" ||
                                     (typeof children === "string" &&
                                       children.toLowerCase().includes("resume"));
