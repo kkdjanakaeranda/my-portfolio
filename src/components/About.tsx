@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 const focusAreas = [
-  "🤖 Artificial Intelligence",
-  "⚛️ Full Stack Development",
-  "🚀 Software Engineering",
-  "📡 IoT Systems",
-  "☁️ Cloud Computing",
-  "🌐 Web Development",
+  "Artificial Intelligence",
+  "Full Stack Development",
+  "Software Engineering",
+  "IoT Systems",
+  "Cloud Computing",
+  "Web Development",
 ];
 
 export default function About() {

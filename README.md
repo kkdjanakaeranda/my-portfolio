@@ -1,23 +1,24 @@
-# 🌌 Janaka Eranda - Personal Portfolio Website
+# Janaka Eranda - Personal Portfolio Website
 
 A modern, high-performance, and visually stunning personal portfolio website built with **Next.js 16**, **React 19**, **Tailwind CSS v4**, and **Framer Motion**. This portfolio showcases the projects, skills, education, and professional experience of Janaka Eranda, a Software Engineering undergraduate at the University of Kelaniya.
 
-✨ **Live Site:** [janakaeranda-portfolio.vercel.app](https://janakaeranda-portfolio.vercel.app/)
+**Live Site:** [janakaeranda-portfolio.vercel.app](https://janakaeranda-portfolio.vercel.app/)
 
 ---
 
-## 🚀 Features
+## Features
 
-- 📱 **Fully Responsive Design:** Crafted with a mobile-first approach, ensuring seamless rendering across all devices (mobiles, tablets, and desktops).
-- 🎨 **Premium Modern Aesthetics:** Sleek dark-mode theme utilizing glassmorphism, glowing radial gradients, custom typography (Geist), and a violet color palette.
-- ⚡ **Dynamic Micro-Animations:** Driven by Framer Motion, featuring smooth viewport-triggered scroll entrance transitions, hover effects, and responsive cards.
-- 📂 **Categorized Project Showcase:** Highlights selected works spanning Artificial Intelligence, Full-Stack Web Applications, IoT projects, and mobile dashboards.
-- 🛠️ **Technical Toolkit Breakdown:** Clear categorization of programming languages, frontend systems, backend frameworks, and database architectures.
-- 📨 **Direct Email Contact Form:** An interactive contact form integrated with the **Resend API** for fast, reliable message delivery.
+- **Fully Responsive Design:** Crafted with a mobile-first approach, ensuring seamless rendering across all devices (mobiles, tablets, and desktops).
+- **Premium Modern Aesthetics:** Sleek dark-mode theme utilizing glassmorphism, glowing radial gradients, custom typography (Geist), and a violet color palette.
+- **Dynamic Micro-Animations:** Driven by Framer Motion, featuring smooth viewport-triggered scroll entrance transitions, hover effects, and responsive cards.
+- **Categorized Project Showcase:** Highlights selected works spanning Artificial Intelligence, Full-Stack Web Applications, IoT projects, and mobile dashboards.
+- **Technical Toolkit Breakdown:** Clear categorization of programming languages, frontend systems, backend frameworks, and database architectures.
+- **Direct Email Contact Form:** An interactive contact form integrated with the **Resend API** for fast, reliable message delivery.
+- **AI Portfolio Assistant:** A minimalist, recruiter-friendly digital twin assistant that answers questions about projects, skills, education, experience, and contact info. Supports streaming AI via OpenAI (`gpt-4o-mini`) and features a robust, zero-latency client-side fallback engine that works offline/without API keys. Keyboard shortcut `Ctrl + K` to toggle.
 
 ---
 
-## 🛠️ Tech Stack & Dependencies
+## Tech Stack & Dependencies
 
 ### Core
 - **Framework:** [Next.js 16 (App Router)](https://nextjs.org/)
@@ -26,6 +27,8 @@ A modern, high-performance, and visually stunning personal portfolio website bui
 - **Type Checking:** [TypeScript](https://www.typescriptlang.org/)
 
 ### Libraries & Integration
+- **AI Chat Streaming:** [Vercel AI SDK](https://sdk.ai.dev/) (`ai`, `@ai-sdk/openai`)
+- **Markdown Parsing:** [React Markdown](https://github.com/remarkjs/react-markdown)
 - **Animations:** [Framer Motion](https://www.framer.com/motion/)
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Counters:** [React CountUp](https://github.com/inorganik/countUp.js)
@@ -33,33 +36,40 @@ A modern, high-performance, and visually stunning personal portfolio website bui
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 my-portfolio/
 ├── src/
 │   ├── app/                 # Next.js App Router (Layouts, Pages, APIs)
-│   │   ├── api/             # API routes (e.g., Contact Form integration)
+│   │   ├── api/             # API routes
+│   │   │   ├── chat/        # OpenAI streaming AI chat endpoint
+│   │   │   └── contact/     # Contact Form Resend email integration
 │   │   ├── globals.css      # Core styles & Tailwind CSS directives
 │   │   ├── layout.tsx       # Root layout defining HTML structure
-│   │   └── page.tsx         # Main entry point importing component sections
-│   └── components/          # Reusable UI component sections
-│       ├── About.tsx        # Journey statement & education timeline
-│       ├── Contact.tsx      # Contact form with real-time feedback
-│       ├── Footer.tsx       # Copyright & secondary links
-│       ├── Hero.tsx         # Catchy introduction with CountUp metrics
-│       ├── Navbar.tsx       # Navigation header with scroll actions
-│       ├── Projects.tsx     # Categorized cards for individual/group projects
-│       └── Skills.tsx       # Grid of technical skills grouped by category
-├── public/                  # Static assets (images, icons, resumes)
+│   │   └── page.tsx         # Main entry point (lazy-loads ChatbotWrapper)
+│   ├── components/          # Reusable UI component sections
+│   │   ├── About.tsx        # Journey statement & education timeline
+│   │   ├── Chatbot.tsx      # Minimalist AI Chatbot interface panel
+│   │   ├── ChatbotWrapper.tsx # Client-side wrapper for RSC lazy-loading
+│   │   ├── Contact.tsx      # Contact form with real-time feedback
+│   │   ├── Footer.tsx       # Copyright & secondary links
+│   │   ├── Hero.tsx         # Catchy introduction with CountUp metrics
+│   │   ├── Navbar.tsx       # Navigation header with scroll actions
+│   │   ├── Projects.tsx     # Categorized cards for projects
+│   │   └── Skills.tsx       # Grid of technical skills
+│   ├── data/
+│   │   └── portfolio-data.json # Grounding database (single source of truth)
+│   └── utils/
+│       └── localChatEngine.ts # Smart local fallback search & chat engine
+├── public/                  # Static assets (images, project media, CV download)
 ├── next.config.ts           # Next.js configuration
-├── tailwind.config.js       # Tailwind setup (if any)
 └── package.json             # Scripts and dependency declarations
 ```
 
 ---
 
-## ⚙️ Local Development Setup
+## Local Development Setup
 
 To run this project locally, follow these steps:
 
@@ -80,8 +90,9 @@ Create a file named `.env.local` in the root directory of the project and add th
 ```env
 RESEND_API_KEY=your_resend_api_key_here
 CONTACT_EMAIL=your_inbox_email_here@example.com
+OPENAI_API_KEY=your_openai_api_key_here
 ```
-*Note: Make sure to replace `your_resend_api_key_here` with a valid API key from your [Resend Dashboard](https://resend.com/).*
+*Note: Make sure to replace `your_resend_api_key_here` and `your_openai_api_key_here` with valid API keys. If `OPENAI_API_KEY` is omitted, the chatbot will seamlessly fallback to the local offline search engine.*
 
 ### 4. Run the Development Server
 ```bash
@@ -98,7 +109,7 @@ npm run start
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 The easiest way to deploy this Next.js project is on the [Vercel Platform](https://vercel.com/):
 
@@ -106,4 +117,5 @@ The easiest way to deploy this Next.js project is on the [Vercel Platform](https
 2. In the Vercel Project Settings, add the Environment Variables:
    - `RESEND_API_KEY`
    - `CONTACT_EMAIL`
+   - `OPENAI_API_KEY` (Optional: Required for streaming AI chat. If omitted, the chatbot falls back to the client search engine.)
 3. Click **Deploy**. Vercel will automatically build the site and provide a production-ready link.

@@ -1,29 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Terminal, Layout, Server, Bot } from "lucide-react";
 
 const skillCategories = [
   {
     title: "Programming",
-    icon: "💻",
+    icon: Terminal,
     description: "Languages for problem solving and software development.",
     skills: ["Java", "Python", "JavaScript", "TypeScript", "SQL", "C++"],
   },
   {
     title: "Frontend",
-    icon: "🎨",
+    icon: Layout,
     description: "Building modern responsive user interfaces.",
     skills: ["React", "Next.js", "Angular", "Tailwind CSS", "HTML", "CSS"],
   },
   {
     title: "Backend",
-    icon: "⚙️",
+    icon: Server,
     description: "Creating APIs, server logic, and web systems.",
     skills: ["Node.js", "Express.js", "PHP", "ASP.NET Core", "REST APIs"],
   },
   {
     title: "AI & Databases",
-    icon: "🤖",
+    icon: Bot,
     description: "AI integrations and data-driven applications.",
     skills: ["OpenAI API", "LangChain", "MySQL", "MongoDB", "Firebase"],
   },
@@ -74,8 +75,8 @@ export default function Skills() {
 
               <div className="relative z-10">
                 <div className="mb-6 flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-2xl bg-zinc-950 border border-zinc-800 flex items-center justify-center text-3xl group-hover:scale-110 transition">
-                    {category.icon}
+                  <div className="w-14 h-14 rounded-2xl bg-zinc-950 border border-zinc-800 flex items-center justify-center group-hover:scale-110 transition">
+                    <category.icon className="w-6 h-6 text-violet-400" />
                   </div>
 
                   <div>

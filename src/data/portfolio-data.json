@@ -1,0 +1,174 @@
+{
+  "personal": {
+    "name": "Janaka Eranda",
+    "role": "Software Developer & AI Engineer",
+    "location": "Sri Lanka",
+    "profileImage": "/images/profile.png",
+    "tagline": "Building modern web applications, AI-powered solutions, and IoT systems that solve real-world problems.",
+    "availability": "Available for Internships",
+    "focus": "AI & Full Stack Development"
+  },
+  "about": {
+    "journey": "I am Janaka Eranda, a Software Engineering-focused undergraduate at the University of Kelaniya with a strong passion for Full Stack Development, Artificial Intelligence, and emerging technologies. My experience includes building AI-powered systems such as EduRAG+, developing modern web applications using Next.js and React, creating IoT solutions with ESP32 and Firebase, and designing scalable database-driven systems.",
+    "currentFocus": "Currently expanding my expertise through the Advanced AI & Software Engineering program while actively seeking internship opportunities where I can contribute, learn, and grow as a software engineer.",
+    "focusAreas": [
+      "Artificial Intelligence",
+      "Full Stack Development",
+      "Software Engineering",
+      "IoT Systems",
+      "Cloud Computing",
+      "Web Development"
+    ]
+  },
+  "skills": {
+    "categories": [
+      {
+        "title": "Programming Languages",
+        "icon": "",
+        "skills": ["Java", "Python", "JavaScript", "TypeScript", "SQL", "C++", "Arduino C++"]
+      },
+      {
+        "title": "Frontend Development",
+        "icon": "",
+        "skills": ["React", "Next.js", "Angular", "Tailwind CSS", "HTML", "CSS"]
+      },
+      {
+        "title": "Backend Development",
+        "icon": "",
+        "skills": ["Node.js", "Express.js", "PHP", "ASP.NET Core", "FastAPI", "REST APIs"]
+      },
+      {
+        "title": "AI, Cloud & Databases",
+        "icon": "",
+        "skills": ["OpenAI API", "LangChain", "Pinecone", "MCP Server", "MySQL", "PostgreSQL", "MongoDB", "Firebase", "Supabase", "Blynk IoT"]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Smart Hire",
+      "type": "Web Application - Group Project",
+      "image": "/projects/smart-hire.jpg",
+      "tech": ["Angular", "Python", "FastAPI", "MCP Server", "Supabase", "SQLAlchemy ORM", "OpenAI API"],
+      "description": "Smart Hire is a centralized digital marketplace that connects customers with trusted service providers such as plumbers, electricians, cleaners, tutors, repair technicians, home-maintenance workers, and technical-support professionals.",
+      "repo": "https://github.com/nilan92/Smart-Hire-System",
+      "live": ""
+    },
+    {
+      "title": "Smart-IoT-Based-Plant-Irrigation-System",
+      "type": "IoT Project - Personal Project",
+      "image": "/projects/plant_irrigation.jpg",
+      "tech": ["Arduino C++", "ESP32", "Soil Moisture Sensor", "rain sensor"],
+      "description": "An IoT-based Smart Plant Irrigation System developed using ESP32 to automate irrigation based on real-time environmental conditions. The system continuously monitors soil moisture, temperature, humidity, rainfall, and water tank level to make intelligent irrigation decisions. It also provides remote monitoring and manual control through the Blynk IoT mobile application.",
+      "repo": "https://github.com/kkdjanakaeranda/Smart-IoT-Based-Plant-Irrigation-System",
+      "live": ""
+    },
+    {
+      "title": "Expense Tracker",
+      "type": "Web Application - Personal Project",
+      "image": "/projects/expense-tracker.jpg",
+      "tech": ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"],
+      "description": "A comprehensive personal finance management application that allows users to track income and expenses, categorize transactions, and visualize spending habits through interactive charts.",
+      "repo": "https://github.com/kkdjanakaeranda/expense-tracker",
+      "live": "https://expense-tracker-alpha-69.vercel.app/"
+    },
+    {
+      "title": "CLINEXA - Hospital Appointment Management System",
+      "type": "Web Application - Group Project",
+      "image": "/projects/clinexa.jpg",
+      "tech": ["React", "Vite", "Supabase", "Tailwind CSS"],
+      "description": "Hospital Appointment Management System is a web-based application for managing hospital appointments, doctor schedules, and patient records with secure role-based access.",
+      "repo": "https://github.com/neshanpramuditha/Hospital-Appointment-System",
+      "live": "https://clinexa-azure.vercel.app/"
+    },
+    {
+      "title": "EduRAG+",
+      "type": "AI / RAG System",
+      "image": "/projects/edurag.jpg",
+      "tech": ["FastAPI", "LangChain", "Pinecone", "OpenAI API"],
+      "description": "AI-powered RAG system for lecture note analysis, semantic search, and exam preparation.",
+      "repo": "https://github.com/kkdjanakaeranda/EduRAG",
+      "live": "https://edu-rag-theta.vercel.app/"
+    },
+    {
+      "title": "Smart Irrigation System",
+      "type": "IoT Project - Group Project",
+      "image": "/projects/irrigation.jpg",
+      "tech": ["ESP32", "Firebase", "IoT"],
+      "description": "IoT-based automated irrigation system with real-time monitoring and remote control.",
+      "repo": "https://github.com/kkdjanakaeranda/smart-irrigation-system",
+      "repo2": "https://github.com/KMDS21/Smart-Irrigation-System",
+      "live": "https://www.linkedin.com/posts/kkdjanakaeranda_smartirrigation-sustainablefarming-climateresilience-ugcPost-7352631703900770304-1KRn/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADG-_HUBIg1AgcfTQriBz2qjr1QNGvoA2Hg"
+    },
+    {
+      "title": "Student Management System",
+      "type": "Web Application - Individual Project",
+      "image": "/projects/student-management.jpg",
+      "tech": ["PHP", "MySQL", "JavaScript"],
+      "description": "Role-based student management platform with attendance, grading, and admin modules.",
+      "repo": "https://github.com/kkdjanakaeranda/student-management-system",
+      "live": "https://student-management-system-janaka.infinityfree.io/login.php"
+    },
+    {
+      "title": "Portfolio Website",
+      "type": "Personal Website",
+      "image": "/projects/portfolio.jpg",
+      "tech": ["Next.js", "Tailwind CSS"],
+      "description": "Modern responsive portfolio website showcasing projects, skills, and experience.",
+      "repo": "https://github.com/kkdjanakaeranda/my-portfolio",
+      "live": "https://janakaeranda-portfolio.vercel.app/"
+    }
+  ],
+  "education": [
+    {
+      "degree": "BICT (Hons) in Software System Technology",
+      "institution": "University of Kelaniya",
+      "period": "Present",
+      "details": "Specializing in Software System Technology, focusing on clean code practices, systems analysis, and software architecture."
+    },
+    {
+      "degree": "Advanced AI & Software Engineering",
+      "institution": "C-Clarke Institute",
+      "period": "Ongoing",
+      "details": "Specializing in building AI integrations, prompt engineering, vector databases (RAG), and modern full-stack web applications."
+    },
+    {
+      "degree": "Diploma in ICT & English",
+      "institution": "ICBT Campus",
+      "period": "2022",
+      "details": "Foundational programming, database design, and professional English communication."
+    }
+  ],
+  "experience": [
+    {
+      "role": "Software Engineering Student & Project Lead",
+      "organization": "University of Kelaniya",
+      "period": "Present",
+      "description": "Leading team projects such as Smart Hire and Smart Irrigation System. Handling system architecture, integrating database schemas (Supabase, Firebase, MySQL), and writing microservices in FastAPI/Node.js."
+    },
+    {
+      "role": "Independent Developer",
+      "organization": "Open Source & Personal Projects",
+      "period": "Ongoing",
+      "description": "Developing and publishing full-stack applications (Expense Tracker), AI-focused projects (EduRAG+), and IoT automation scripts (Smart-IoT-Based-Plant-Irrigation-System) on GitHub."
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Developed EduRAG+",
+      "description": "Successfully built and deployed an AI-powered RAG system for analyzing PDF lecture notes semantically, using FastAPI, LangChain, Pinecone, and OpenAI."
+    },
+    {
+      "title": "LinkedIn Feature",
+      "description": "Showcased the Smart Irrigation System on LinkedIn, demonstrating modern automation for climate resilience in agriculture."
+    }
+  ],
+  "contact": {
+    "email": "kkdjanakaeranda@gmail.com",
+    "phone": "+94 71 136 7585",
+    "github": "https://github.com/kkdjanakaeranda",
+    "linkedin": "https://linkedin.com/in/kkdjanakaeranda",
+    "portfolio": "https://janakaeranda-portfolio.vercel.app/",
+    "resume": "/download/Janaka_Eranda_Software_Engineer_Intern_CV.pdf"
+  }
+}
