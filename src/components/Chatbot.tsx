@@ -31,6 +31,68 @@ export default function Chatbot() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const messagesRef = useRef<Message[]>([]);
+  const sessionIdRef = useRef<string>("");
+  const lastLoggedMessageCountRef = useRef<number>(0);
+
+  // Keep messagesRef updated with latest messages
+  useEffect(() => {
+    messagesRef.current = messages;
+  }, [messages]);
+
+  // Initialize unique session ID on mount
+  useEffect(() => {
+    sessionIdRef.current = Math.random().toString(36).substring(7);
+  }, []);
+
+  // Send conversation logs via api endpoint
+  const sendLog = () => {
+    const currentMsgs = messagesRef.current;
+    const currentSessionId = sessionIdRef.current;
+    const userMsgsCount = currentMsgs.filter((m) => m.role === "user").length;
+
+    if (userMsgsCount > 0 && userMsgsCount > lastLoggedMessageCountRef.current) {
+      lastLoggedMessageCountRef.current = userMsgsCount;
+
+      fetch("/api/chat/log", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          messages: currentMsgs,
+          sessionId: currentSessionId,
+        }),
+        keepalive: true,
+      }).catch((err) => console.warn("Failed to send chat log:", err));
+    }
+  };
+
+  // Log when chat window is closed
+  useEffect(() => {
+    if (!isOpen) {
+      sendLog();
+    }
+  }, [isOpen]);
+
+  // Log on page unload (tab close / refresh)
+  useEffect(() => {
+    const handleUnload = () => {
+      sendLog();
+    };
+    window.addEventListener("beforeunload", handleUnload);
+    window.addEventListener("pagehide", handleUnload);
+    return () => {
+      window.removeEventListener("beforeunload", handleUnload);
+      window.removeEventListener("pagehide", handleUnload);
+    };
+  }, []);
+
+  const handleClearChat = () => {
+    sendLog();
+    setMessages([]);
+    sessionIdRef.current = Math.random().toString(36).substring(7);
+    lastLoggedMessageCountRef.current = 0;
+  };
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -184,7 +246,7 @@ export default function Chatbot() {
               <div className="flex items-center gap-1">
                 {messages.length > 0 && (
                   <button
-                    onClick={() => setMessages([])}
+                    onClick={handleClearChat}
                     title="Clear Chat"
                     className="p-1.5 text-zinc-500 hover:text-zinc-300 rounded transition cursor-pointer"
                   >
