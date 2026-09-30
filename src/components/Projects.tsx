@@ -4,6 +4,26 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const projects = [
+{
+  "title": "WanderLuxe",
+  "type": "Full-Stack Web Application - Personal Project",
+  "image": "/projects/wanderluxe.jpg",
+  "tech": [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Node.js",
+    "Express",
+    "PostgreSQL",
+    "Prisma ORM",
+    "Zustand",
+    "Framer Motion",
+    "Vite"
+  ],
+  "description": "WanderLuxe is a full-stack luxury travel and tourism platform featuring curated expedition dossiers, real-time faceted search and catalog filtering, an interactive day-by-day custom trip planner, a multi-step booking engine with add-ons and voucher generation, and secure JWT cookie authentication.",
+  "repo": "https://github.com/kkdjanakaeranda/travel_site",
+  "live": "https://travel-site-ten-blush.vercel.app/"
+},
   {
   title: "Smart Hire",
   type: "Web Application - Group Project",
