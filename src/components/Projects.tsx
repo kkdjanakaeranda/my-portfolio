@@ -7,7 +7,7 @@ const projects = [
 {
   "title": "WanderLuxe",
   "type": "Full-Stack Web Application - Personal Project",
-  "image": "/projects/wanderluxe.jpg",
+  "image": "/projects/wanderluxe.png",
   "tech": [
     "React",
     "TypeScript",
